@@ -13,6 +13,8 @@ RUN echo 'deb https://homegear.eu/packages/Debian/ jessie/' >> /etc/apt/sources.
 RUN apt-get update
 RUN apt-get install -y homegear homegear-homematicbidcos
 
+VOLUME /etc/homegear
+
 EXPOSE 2001
 
 CMD service homegear restart && bash
