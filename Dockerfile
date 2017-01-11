@@ -17,4 +17,4 @@ VOLUME /etc/homegear
 
 EXPOSE 2001
 
-CMD service homegear restart && bash
+CMD ["bash", "-c", "service homegear restart; bash"]
